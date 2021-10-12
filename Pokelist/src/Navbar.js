@@ -1,6 +1,7 @@
 const Navbar = () =>{
     return (
         <nav className = "navbar">
+            <img className="siteIcon" src = '.\Assets\images\icon.png'></img>
             <h1 style = {{
                 color : "#f1356d",
                 padding : '4px',
@@ -15,12 +16,12 @@ const Navbar = () =>{
                     color : "white",
                     backgroundColor: '#f1356d',
                     borderRadius : '28px',
+                   
                 } } className ="Button">Home </a>       
                 <a href ="\create" style ={{
                     color : "white",
                     backgroundColor: '#f1356d',
                     borderRadius : '28px',
-                     
                 }}className ="Button">Add new Pokemons </a>  
             </div>
         </nav>

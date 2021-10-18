@@ -1,12 +1,15 @@
+import { Link} from 'react-router-dom'
+
+
 const Navbar = () =>{
     return (
         <nav className = "navbar">
-            <img className="siteIcon" src = '.\Assets\images\icon.png'></img>
+            <img className="siteIcon" src = '.\Assets\images\icon.png' alt ="Pokelist symbol"></img>
             <h1 className ='siteTitle'>Pokelist</h1>
             <div className ="links"> 
-                <a href ="\"  className ="Button">Home </a>   
+                <Link to ="/"  className ="Button">Home </Link>   
                 &nbsp;&nbsp;    
-                <a href ="\create" className ="Button">Add new Pokemons </a>  
+                <Link to ="/addPokemon" className ="Button">Add new Pokemons </Link>  
             </div>
         </nav>
 

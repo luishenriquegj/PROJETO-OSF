@@ -63,9 +63,6 @@ body, html {
   
 }
 
-.navbar h1 {
-    color: #f1356d;
-}
 
 .navbar .links {
     margin-left: auto;
@@ -74,10 +71,46 @@ body, html {
 .navbar a {
     margin-left: 16px;
     text-decoration: none;
-    padding: 6px;
+    padding: 5px;
+    
 }
 
 
+.loadingText{
+  font-weight: bold;
+  text-align: center;
+  color: #f1356d;
+  padding: 5px;
+  border-radius : 28px;
+  border-color: #f1356d;
+}
+
+.titleAdd{
+  background-color: white;
+  border-radius: 26px;
+  color : #f1356d;
+  text-align: center;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.PokemonForm{
+   background-color: white;
+   border-radius: 25px;
+   padding: 15px;
+}
+.formInputs{
+  align-content: center;
+  border:dashed #f1356d ;
+  border-radius: 25px;
+}
+.PokemonFormHeaders{
+  color :#f1356d;
+}
+
+.SubmitForm{
+   align-content: center;
+}
 
 .content {
     max-width: 600px;

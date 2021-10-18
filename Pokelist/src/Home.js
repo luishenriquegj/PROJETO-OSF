@@ -1,57 +1,24 @@
 import React from 'react'
-import { useState } from "react";
-import pokemonList from "./pokemon-list.js"
-const  Home = () => {
-    
-    const [pokemons ,setPokemons] = useState(pokemonList);
+import PokemonPreviewing from './PokemonPreviewing.js';
+import useFetch from './useFetch.js';
 
+
+const  Home = () => {
+    const {data:pokemons,isPending,error} = useFetch('http://localhost:8001/pokemons');
+   
+    
+    
     return(
         <div className = 'Home'>
             <div className="pokemon-content">
-            {pokemons.map((pokemon) => (
-                <div className='pokemon-preview' key={pokemon.id}>
-                    <h2 className='pokemonTitle'>
-                        {pokemon.title}
-                    </h2>
-
-                    <img className='pokePhoto' src={"./Assets/images/" + pokemon.title + ".png"} alt={pokemon.title + ".png"}/> 
-
-                    <p className = 'typeHeader'>
-                        Type(s):
-                    </p>
-                    <div className ='pokeType'>
-                        <div>
-                            {pokemon.types.map((type) => (
-                                <div className={`poke-type__item 
-                                    ${type == 'water' ? 'poke-type__water':''}
-                                    ${type == 'fire' ? 'poke-type__fire':''}
-                                    ${type == 'rock' ? 'poke-type__rock':''}
-                                    ${type == 'ice' ? 'poke-type__ice':''}
-                                    ${type == 'poison' ? 'poke-type__poison':''}
-                                    ${type == 'steel' ? 'poke-type__steel':''}
-                                    ${type == 'dark' ? 'poke-type__dark':''}
-                                    ${type == 'ghost' ? 'poke-type__ghost':''}
-                                    ${type == 'dragon' ? 'poke-type__dragon':''}
-                                    ${type == 'fairy' ? 'poke-type__fire':''}
-                                    ${type == 'flying' ? 'poke-type__flying':''}
-                                    ${type == 'fairy' ? 'poke-type__fire':''}
-                                    ${type == 'normal' ? 'poke-type__normal':''}
-                                    ${type == 'psychic' ? 'poke-type__psychic':''}
-                                    ${type == 'electric' ? 'poke-type__electric':''}
-                                    ${type == 'grass' ? 'poke-type__grass':''}
-                                    ${type == 'bug' ? 'poke-type__bug':''}
-                                    ${type == 'default' ? 'poke-type__default':''}
-                                    ${type == 'ground' ? 'poke-type__ground':''}`}
-                                    >
-                                    {type}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            ))}
+                { error && <div className ='loadingText'> { error }</div>}
+                {isPending && <h2 className ="loadingText">Loading Pokemons...</h2>}
+                {pokemons && <PokemonPreviewing pokemons = {pokemons}/>}
             </div>
+                
         </div>
     );}
+
+
 
 export default Home;

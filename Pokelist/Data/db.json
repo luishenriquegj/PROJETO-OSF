@@ -186,6 +186,7 @@
     },
     {
       "title": "Raticate",
+      "iamge": "Data/Image/",
       "types": [
         "normal",
         "default"
@@ -239,6 +240,55 @@
         "poison"
       ],
       "id": "30"
+    },
+    {
+      "title": "buzzwole",
+      "types": [
+        "bug",
+        "fighting"
+      ],
+      "id": "EC0PfU-"
+    },
+    {
+      "title": "Morpeko",
+      "types": [
+        "electric",
+        "normal"
+      ],
+      "id": "rvU2S9Z"
+    },
+    {
+      "title": "Solgaleo",
+      "types": [
+        "fairy",
+        "fire"
+      ],
+      "id": "i5p1_nG"
+    },
+    {
+      "title": "Snorlax",
+      "types": [
+        "normal",
+        "default"
+      ],
+      "id": "69VIr4B"
+    },
+    {
+      "title": "Cubone",
+      "types": [
+        "normal",
+        "ground"
+      ],
+      "id": "4z4RsDh"
+    },
+    {
+      "title": "Meowth",
+      "types": [
+        "normal",
+        "default"
+      ],
+      "image": "",
+      "id": "M8xvY52"
     }
   ]
 }

@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router';
 const AddPokemon = () => {
     
     const [title,setTitle]= useState ('');
     const [type1,setType1]= useState ('');
     const [type2,setType2]= useState ('');
+    const [image,setImage] = useState(''); 
+    const Hist = useHistory();
+
     var types =[];
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -12,7 +16,8 @@ const AddPokemon = () => {
         if(types [1] == '' ){
             types [1] = 'default';
         }
-        const pokemon = {title,types};
+        const pokemon = {title,types,image};
+        JSON.stringify(pokemon.image);
         console.log(pokemon);
         fetch('http://localhost:8001/pokemons',{
         method: 'POST',
@@ -20,6 +25,7 @@ const AddPokemon = () => {
         body: JSON.stringify(pokemon)
     }).then(()=>{
          alert("a wild pokemon as been added!")
+            Hist.push('/');
     })
     
 }
@@ -31,7 +37,7 @@ return (
     <h2 className = "titleAdd">Add your New Pokemon </h2>
     <form className = "PokemonForm" onSubmit ={handleSubmit}>
         <h2 className ="PokemonFormHeaders">Insert your new Pokemon name's</h2>
-        <input type="text" className ="formInputs" value ={title} onChange={(e) =>setTitle(e.target.value)}/>
+        <input type="text" className ="formInputs" value ={title} onChange={(e) =>setTitle(e.target.value)} required/>
         
         <h2 className ="PokemonFormHeaders">Insert main type of your new Pokemon </h2>
         <input type="text" className ="formInputs" required value={type1} onChange={(e) =>setType1(e.target.value)}/>
@@ -42,8 +48,8 @@ return (
         
         <h2 className ="PokemonFormHeaders" >Insert your new Pokemon photo's</h2>
         <h3 className = 'formWarning'>the file must be named after the pokemon</h3>
-        <input type="file"  className ="formInputs" /> 
-        
+        <input type="file"  className ="formInputs" value={image} onChange ={(e) => setImage(e.target.value)} /> 
+        <h4 className ="warning">Image uploading still in development, the app will use a default image instead</h4>
         <input type = "submit" className ="SubmitForm"/>
     </form>
     

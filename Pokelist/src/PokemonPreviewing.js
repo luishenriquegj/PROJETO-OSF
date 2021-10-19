@@ -1,4 +1,9 @@
+ import { Link } from "react-router-dom";
+
+
+
 const PokemonPreviewing  = ({pokemons}) => {
+   
      return (
         pokemons.map((pokemon) => (
             <div className='pokemon-preview' key={pokemon.id}>
@@ -26,9 +31,9 @@ const PokemonPreviewing  = ({pokemons}) => {
                                 ${type === 'dark' ? 'poke-type__dark':''}
                                 ${type === 'ghost' ? 'poke-type__ghost':''}
                                 ${type === 'dragon' ? 'poke-type__dragon':''}
-                                ${type === 'fairy' ? 'poke-type__fire':''}
+                                ${type === 'fairy' ? 'poke-type__fairy':''}
                                 ${type === 'flying' ? 'poke-type__flying':''}
-                                ${type === 'fairy' ? 'poke-type__fire':''}
+                                ${type === 'fighting' ? 'poke-type__fighting':''}
                                 ${type === 'normal' ? 'poke-type__normal':''}
                                 ${type === 'psychic' ? 'poke-type__psychic':''}
                                 ${type === 'electric' ? 'poke-type__electric':''}
@@ -38,8 +43,10 @@ const PokemonPreviewing  = ({pokemons}) => {
                                 ${type === 'ground' ? 'poke-type__ground':''}`}
                                 >
                                 {type}
+                                
                             </div>
                         ))}
+                       
                     </div>
                 </div>
             </div>

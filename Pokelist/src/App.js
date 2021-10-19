@@ -3,6 +3,7 @@ import Home from './Home';
 import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 import AddPokemon from './AddPokemon';
 
+
 function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ function App() {
             <Route exact path="/AddPokemon">
                 <AddPokemon />
             </Route>
+            
           </Switch>
         </div>
       </div>

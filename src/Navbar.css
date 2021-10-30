@@ -1,0 +1,48 @@
+.siteIcon{
+    max-height: 100px;
+}
+
+.siteTitle  {
+  color : #f1356d ;
+  padding : 4px;
+  background-color: white;
+  border-radius: 28px;
+  border-color: #f1356d;
+  border: 4px  solid;
+}
+
+.Button:hover {
+    position: relative;
+    top : 4px;
+}
+
+.navbar {
+    
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    border-bottom: 2px solid #f2f2f2;
+    border-left:  1px solid #f2f2f2 ;
+    border-right: 1px solid #f2f2f2 ;
+    background-color: white;
+}
+
+.Button{
+  color : white;
+  background-color: #f1356d;
+  border-radius : 28px;
+  
+}
+
+.navbar .links {
+    margin-left: auto;
+}
+
+.navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 5px;
+    
+}

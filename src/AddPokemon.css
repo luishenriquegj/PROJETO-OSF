@@ -1,0 +1,28 @@
+.titleAdd{
+    background-color: white;
+    border-radius: 26px;
+    color : #f1356d;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+  }
+  
+  .PokemonForm{
+     background-color: white;
+     border-radius: 25px;
+     padding: 15px;
+     max-width: 600px;
+     margin: 40px auto;
+  }
+  .formInputs{
+    align-content: center;
+    border:dashed #f1356d ;
+    border-radius: 25px;
+  }
+  .PokemonFormHeaders{
+    color :#f1356d;
+  }
+  
+  .SubmitForm{
+     align-content: center;
+  }

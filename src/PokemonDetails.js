@@ -11,9 +11,11 @@ const PokemonDetails = () => {
           {pokemons && (
                 <div className ="detail-container">
                     <h2 className ="title-detail">{pokemons.title}</h2>
-                    <img className='photo-detail' src={"/Assets/images/" + pokemons.title + ".png"} alt={pokemons.title + ".png"}/> 
+                    <img className='photo-detail' src={"/Assets/gifs/" + pokemons.title + ".gif"} alt={pokemons.title + ".gif"}/> 
+                    <h2 className ="shiny-header">Shiny form </h2>
+                    <img className='shiny-detail' src={"/Assets/gifs/" + pokemons.title + " (1)" +".gif"} alt={pokemons.title + "shiny" + ".gif"}/> 
                     <div >
-                         
+                         <h3>Type(s):</h3>
                          {pokemons.types.map((type) => (
                             
                              <div className={`poke-type__item 
@@ -42,7 +44,9 @@ const PokemonDetails = () => {
                              </div>
                          ))}
                         
+                        
                      </div>
+                    
                 </div>
           )}
         </div>

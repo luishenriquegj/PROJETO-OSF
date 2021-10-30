@@ -27,9 +27,15 @@
   }
 
   .photo-detail{
-    width: 60%;
+    width: 55%;
     height: auto;
     object-fit: contain;
+  }
+  
+  .shiny-detail{ 
+    width: 30%;
+    height: auyto;
+   
   }
 
   .type-detail{
